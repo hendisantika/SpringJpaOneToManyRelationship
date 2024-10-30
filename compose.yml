@@ -1,0 +1,11 @@
+services:
+  mysql9:
+    image: mysql:9.1.0
+    container_name: mysql9
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=one_to_many
+    volumes:
+      - ./mysql9:/var/lib/mysql
